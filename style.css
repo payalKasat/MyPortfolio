@@ -76,9 +76,13 @@ body {
     color: #98104b;
     font-size: 20px;
 }
-.about_me p{
+ p{
     font-size: 20px;
 }
+ .about_me{
+     border: 5px solid #818181;
+     border-radius: 10px;
+ }
 .about_me p strong{
     color: #98104b;
 }
