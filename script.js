@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    $('.panel').mouseenter(function(){
+        panel_hover(this);
+    });
+    $('.panel').mouseleave(function(){
+        panel_leave(this);
+    });
+    timeMessage();
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
@@ -31,4 +38,49 @@ $(document).ready(function(){
             }
         });
     });
-})
+
+});
+
+function panel_hover(element){
+    var project1 = $('.project1');
+    var project2 = $('.project2');
+    var project3 = $('.project3');
+    var project4 = $('.project4');
+
+    if(project1[0]===element){
+        $(element).addClass('hover_panel_animation');
+        $('.hover_panel1').css({'display':'block'});
+    }
+    else if(project2[0] === element){
+        $(element).addClass('hover_panel_animation');
+        $('.hover_panel2').css({'display':'block'});
+    }
+    else if(project3[0] === element){
+        $(element).addClass('hover_panel_animation');
+        $('.hover_panel3').css({'display':'block'});
+    }
+    else if(project4 === element){
+        $(element).addClass('hover_panel_animation');
+        $('.hover_panel4').css({'display':'block'});
+    }
+
+}
+
+function panel_leave(element){
+   $(element).removeClass('hover_panel_animation');
+   $('.hover_panel1,.hover_panel2,.hover_panel3').css({'display':'none'});
+}
+function timeMessage(){
+    var time = new Date().getHours();
+    // $('.time_message').hide();
+    if (time < 12){
+        $('.time_message').text('Good Morning!!').show(3000);
+
+    }
+    else if(time < 18){
+        $('.time_message').text('Good Afternoon!!').show(3000);
+    }
+    else{
+        $('.time_message').text('Good Evening!!').show(3000);
+    }
+}

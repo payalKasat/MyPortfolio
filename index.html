@@ -7,14 +7,11 @@
     <meta name="keywords" content="HTML, CSS, jQuary,javaScript,Bootstrap">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--<link rel="stylesheet" type="text/css" href="style2.css">-->
     <script src="script.js"></script>
 
 </head>
@@ -49,7 +46,10 @@
 
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid text-center">
-    <h1>I am <span class="about_special">Web Developer!!</span></h1>
+    <div>
+        <h2 class="time_message"></h2>
+    </div>
+    <h1 class="slideanim_h1">I am <span class="about_special">Web Developer!!</span></h1>
     <h3>And that's my name..</h3>
     <button class="know_me " type="button"><a href="#self_info">Know me<span class="glyphicon glyphicon-chevron-right"></span></a></button>
 </div>
@@ -57,16 +57,20 @@
 
 <div id="self_info" class="container-fluid bg-grey"><!-- This section is information about my self and my work-->
     <div class="row">
-        <div class="col-sm-12 col-md-4 about_img">
-            <img class="slideanim" src="images/landing_page1-copy.png">
-        </div>
-        <div class="col-sm-12 col-md-8 about_me">
-            <h2 class="text-center">Front End Developer/Designer</h2><br>
-            <hr class="hori_line" style="height:5px; width:300px; background-color:#af0a7d">
+        <h2 class="text-center">About Me</h2>
+        <hr class="hori_line" style="height:5px; width:300px; background-color:#c94340">
 
-            <p><strong>ABOUT ME:</strong> MY passion is designing , development. I am based out of southern California and
-                Specializing in HTML, CSS, JavaScript, Bootstrap, jQuery.<br> Also basic knowledge of photoshop, illustrator and AJAX.</p>
-            <p>I have done Realdynamics website(AX consultant company), Non-profit organisation website. Also, Community website.
+        <div class="col-sm-12 col-md-4 about_img">
+            <img class="slideanim" src="images/landing_page1.png">
+        </div>
+        <div class="col-sm-12 col-md-8 about_me slideanim">
+            <h2 class="text-center">Front End Developer/Designer</h2>
+            <hr class="hori_line" style="height:5px; width:300px; background-color:#c94340">
+
+            <p><strong>ABOUT ME:</strong> MY passion is designing, development. I am based out of Southern California and
+                Specializing in <span class="specialize">HTML5, CSS3, JavaScript, Bootstrap3 and 4, jQuery</span>.<br> Also basic
+                knowledge of <span class="sp_second">photoshop, illustrator Angular and AJAX.</span></p>
+            <p>I have created several website including Realdynamics website(AX consultant company), Non-profit organisation website. Also, Community website.
                 Along with some of my own projects like, Memory match game for kids, Math car game for my son and tic-tac-toe game.  </p>
             <p><strong>Key Work:</strong></p>
             <ul>
@@ -84,7 +88,7 @@
 <!-- Container (Services Section) -->
 <div id="skills" class="container-fluid text-center">
     <h2>Skills</h2>
-    <hr class="hori_line" style="height:5px; width:300px; background-color:#af0a7d">
+    <hr class="hori_line" style="height:5px; width:300px; background-color:#c94340">
     <h3>What I Know</h3>
     <br>
     <div class="row slideanim">
@@ -132,7 +136,7 @@
         <div class="col-sm-4">
             <img src="images/bt_icon.png" class="logo-small">
             <h4>Bootstrap</h4>
-            <p>For moder and easy solution..</p>
+            <p>For modern and easy solution..</p>
         </div>
         <div class="col-sm-4">
             <img src="images/adobe.png" class="logo-small">
@@ -144,13 +148,18 @@
 
 <!-- Container (Project Section) -->
 <div id="project" class="container-fluid text-center bg-grey">
-    <h2>Project</h2><br>
-    <hr class="hori_line" style="height:5px; width:300px; background-color:#af0a7d">
-    <h4>What I have created</h4>
+    <h2>Projects</h2>
+    <hr class="hori_line" style="height:5px; width:300px; background-color:#c94340">
+    <h3>What I have done</h3>
     <div class="row text-center slideanim">
-        <div class="col-sm-4">
+        <div class="col-sm-4 project-div">
             <div class="thumbnail">
-                <div class="panel panel-default text-center">
+                <div class="hover-p hover_panel1">
+                    <p>Car moves ahead when you solve the equation and give right answer.<br>
+                        For this game I used javascript DOM manipulation and css together to perform that action.
+                    </p>
+                </div>
+                <div class="panel panel-default project1 text-center">
                     <div class="panel-heading">
                         <h1>Math Car Game</h1>
                     </div>
@@ -159,14 +168,21 @@
                     </div>
                     <div class="panel-footer">
                         <button class="btn btn-lg">Live</button>
-                        <button class="btn btn-lg">GitHub</button>
+                        <a href=""><button class="btn btn-lg">GitHub</button></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <div class="panel panel-default text-center">
+        <div class="col-sm-4 project-div">
+            <div class="thumbnail ">
+                <div class="hover-p hover-p hover_panel2">
+                    <p>Memory match was my first project, and I choose kids theme in this because I wanted to
+                        make this game for my son. He was 5 when I created this game.<br>
+                        In this I used Bootstrap to aline things together and also very complexes JavaScript code runs all game.
+                        <br>css also plays very big roll in it.
+                    </p>
+                </div>
+                <div class="panel panel-default project2 text-center">
                     <div class="panel-heading">
                         <h1>Memory match game</h1>
                     </div>
@@ -180,14 +196,19 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <div class="panel panel-default text-center">
+        <div class="col-sm-4 project-div">
+            <div class="thumbnail ">
+                <div class="hover-p hover-p hover_panel3">
+                    <p>Realdynamics was my first client project. I have used Bootstrap, jQuery along with css.
+                       I made almost 3 different pattern for client to choose and this one was finalized.
+                    </p>
+                </div>
+                <div class="panel panel-default project3 text-center">
                     <div class="panel-heading">
                         <h1>Realdynamics</h1>
                     </div>
                     <div class="panel-body">
-                        <img src="images/rd_site.PNG" alt="Paris" >
+                        <img src="images/RD_website.JPG" alt="Paris" >
                     </div>
                     <div class="panel-footer">
                         <button class="btn btn-lg">Live</button>
@@ -197,25 +218,25 @@
             </div>
         </div>
     </div><br>
-    <hr class="hori_line" style="height:5px; width:300px; background-color:#af0a7d">
+    <hr class="hori_line" style="height:5px; width:300px; background-color:#c94340">
     <div class="row text-center slideanim">
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <div class="panel panel-default text-center">
+        <div class="col-sm-4 project-div">
+            <div class="thumbnail ">
+                <div class="panel panel-default project4 text-center">
                     <div class="panel-heading">
-                        <h1>Eastwood Indians</h1>
+                        <h1>Community website</h1>
                     </div>
                     <div class="panel-body">
                         <img src="images/eastwood.PNG" alt="Paris" >
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Live</button>
-                        <button class="btn btn-lg">GitHub</button>
+                        <a href=""><button class="btn btn-lg">Live</button></a>
+                        <a href="https://github.com/payalKasat/eastwood_indians"><button class="btn btn-lg">GitHub</button></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 project-div">
             <div class="thumbnail">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -226,23 +247,23 @@
                     </div>
                     <div class="panel-footer">
                         <button class="btn btn-lg">Live</button>
-                        <button class="btn btn-lg">GitHub</button>
+                        <a href="https://github.com/payalKasat/tic-tac-tow"><button class="btn btn-lg">GitHub</button></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 project-div">
             <div class="thumbnail">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <h1>Realdynamics</h1>
                     </div>
                     <div class="panel-body">
-                        <img src="images/rd_site.PNG" alt="Paris" >
+                        <img src="images/RD_website.JPG" alt="Paris" >
                     </div>
                     <div class="panel-footer">
                         <button class="btn btn-lg">Live</button>
-                        <button class="btn btn-lg">GitHub</button>
+                        <a href="https://github.com/payalKasat/RD_new"><button class="btn btn-lg">GitHub</button></a>
                     </div>
                 </div>
             </div>
@@ -250,53 +271,20 @@
     </div><br>
 
 
-    <!--<h2>What our customers say</h2>-->
-    <!--<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">-->
-        <!--&lt;!&ndash; Indicators &ndash;&gt;-->
-        <!--<ol class="carousel-indicators">-->
-            <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
-            <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
-            <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
-        <!--</ol>-->
-
-        <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
-        <!--<div class="carousel-inner" role="listbox">-->
-            <!--<div class="item active">-->
-                <!--<h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>-->
-            <!--</div>-->
-            <!--<div class="item">-->
-                <!--<h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>-->
-            <!--</div>-->
-            <!--<div class="item">-->
-                <!--<h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>-->
-            <!--</div>-->
-        <!--</div>-->
-
-        <!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
-        <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">-->
-            <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-            <!--<span class="sr-only">Previous</span>-->
-        <!--</a>-->
-        <!--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">-->
-            <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-            <!--<span class="sr-only">Next</span>-->
-        <!--</a>-->
-    <!--</div>-->
 </div>
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid ">
     <h2 class="text-center">CONTACT</h2>
-    <hr class="hori_line" style="height:5px; width:300px; background-color:#af0a7d">
+    <hr class="hori_line" style="height:5px; width:300px; background-color:#c94340">
 
     <div class="row">
         <div class="col-sm-5">
             <p>Contact us and we'll get back to you within 24 hours.</p>
             <p><span class="glyphicon glyphicon-map-marker"></span>Irvine, CA</p>
-            <p><span class="glyphicon glyphicon-phone"></span> 650 436 7240</p>
             <p><span class="glyphicon glyphicon-envelope"></span>abc@xyz.com</p>
         </div>
-        <div class="col-sm-7 slideanim">
+        <div class="col-sm-7 ">
             <div class="row">
                 <div class="col-sm-6 form-group">
                     <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
