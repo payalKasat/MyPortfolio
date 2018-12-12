@@ -46,6 +46,8 @@ function panel_hover(element){
     var project2 = $('.project2');
     var project3 = $('.project3');
     var project4 = $('.project4');
+    var project5 = $('.project5');
+    var project6 = $('.project6');
 
     if(project1[0]===element){
         $(element).addClass('hover_panel_animation');
@@ -59,16 +61,24 @@ function panel_hover(element){
         $(element).addClass('hover_panel_animation');
         $('.hover_panel3').css({'display':'block'});
     }
-    else if(project4 === element){
+    else if(project4[0] === element){
         $(element).addClass('hover_panel_animation');
         $('.hover_panel4').css({'display':'block'});
+    }
+    else if(project5[0] === element){
+        $(element).addClass('hover_panel_animation');
+        $('.hover_panel5').css({'display':'block'});
+    }
+    else if(project6[0] === element){
+        $(element).addClass('hover_panel_animation');
+        $('.hover_panel6').css({'display':'block'});
     }
 
 }
 
 function panel_leave(element){
    $(element).removeClass('hover_panel_animation');
-   $('.hover_panel1,.hover_panel2,.hover_panel3').css({'display':'none'});
+   $('.hover_panel1,.hover_panel2,.hover_panel3,.hover_panel4,.hover_panel5,.hover_panel6').css({'display':'none'});
 }
 function timeMessage(){
     var time = new Date().getHours();

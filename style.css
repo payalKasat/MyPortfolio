@@ -87,6 +87,7 @@ h2{
     animation-duration: 2s;
     -webkit-animation-duration: 2s;
     animation-iteration-count: 3;
+    box-shadow: 3px 3px 3px black;
 
 }
 @-webkit-keyframes button_background {
@@ -99,7 +100,7 @@ h2{
         color: black;
     }
     100% {
-        background-color: #c94340;
+        background-color: #373b47;
         border: 2px solid white;
     }
 }
@@ -113,7 +114,14 @@ h2{
     text-decoration: underline;
     text-shadow: 2px 2px #c94340;
 }
-
+.about{
+    animation-name: displaytime;
+    -webkit-animation-name: displaytime;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+    text-decoration: underline;
+}
 @-webkit-keyframes displaytime {
     0% {
         font-size: 0;
@@ -174,14 +182,11 @@ h2{
     color:#c94340;
 }
 
-
-
 .about_img>img{
     height: 300px;
     border-radius: 100%;
     box-shadow: 10px 10px 10px gray;
 }
-
 
 .hori_line{
     width: 300px;
@@ -197,7 +202,7 @@ h2{
     height: 100%;
     margin-bottom: 10px;
 }
-.hover_panel1,.hover_panel2,.hover_panel3{
+.hover_panel1,.hover_panel2,.hover_panel3,.hover_panel4,.hover_panel5,.hover_panel6{
     display: none;
     color: #c94340;
     position: absolute;
@@ -214,14 +219,16 @@ h2{
 }
 .project-div{
     /*box-shadow: 5px 5px 5px gray;*/
- }
+}
 .panel {
     border: 1px solid #c94340;
     border-radius:0 !important;
     transition: box-shadow 0.5s;
 }
+
 .panel:hover {
     box-shadow: 5px 5px 5px gray;
+    padding: 2vh;
 }
 .panel-body>img{
     height: 400px;
@@ -256,6 +263,7 @@ h2{
     margin: 15px 0;
     background-color: #c94340;
     color: #fff;
+    box-shadow: 3px 3px 3px gray;
 }
 .navbar {
     margin-bottom: 0;
@@ -288,6 +296,7 @@ footer .glyphicon {
 .pull-right{
     background-color: #c94340;
     color: white;
+    box-shadow: 5px 5px 5px grey;
 }
 .slideanim_h1{
     animation-name: slide;
