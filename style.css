@@ -228,7 +228,7 @@ h2{
 
 .panel:hover {
     box-shadow: 5px 5px 5px gray;
-    padding: 2vh;
+
 }
 .panel-body>img{
     height: 400px;
